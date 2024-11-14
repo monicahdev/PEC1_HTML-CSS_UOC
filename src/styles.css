@@ -1,0 +1,653 @@
+/******* Colores y tipografía *******/
+:root {
+    --main-color: rgb(225, 215, 252);
+    --second-color: rgb(28, 28, 57);
+    --third-color: rgba(226, 217, 252, 0.578);  
+    --accent-color: rgb(203, 0, 139);
+    --sans-serif-headings: "Aboreto", system-ui;
+    --sans-serif: "Poppins", sans-serif;    
+}
+
+/******** Reglas generales *******/
+
+/* Reset */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+.container-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+body {
+  background-color: var(--second-color);
+  font-family: var(--sans-serif);
+  color: var(--main-color);  
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  background-color: rgba(203, 207, 241, 0.095);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--sans-serif-headings);
+  color: var(--accent-color);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: 2px;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+.italics {
+  font-style: italic;
+}
+
+/*Reglas para el header*/
+header {
+  position:relative;
+  background: url("./img/fondo_header_bogota.png") no-repeat right;
+  background-size: contain;
+  padding: 2.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 0.75rem;
+
+}
+
+.burger-menu {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+  margin: unset;
+  
+}
+
+/*Reglas del menú de navegación*/
+.nav-menu  {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--main-color);
+  background-color: rgba(140, 146, 199, 0.901);
+  text-transform: uppercase;
+  display: none;
+  z-index: 1; 
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-menu ul li {
+  padding: 1rem;
+}
+
+.nav-menu ul li a {
+  color: inherit;
+  border: none;
+  text-decoration: none;
+}
+
+.nav-menu ul li a:hover {
+  border: none;
+  color: var(--accent-color);
+
+}
+
+.nav-menu ul li a:active {
+  border: none;
+  color: var(--main-color);
+  
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 0.5rem;  
+}
+
+.intro p {
+  font-size: 1.25rem;
+}
+
+/* Videos responsive */
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 0;
+}
+
+/*Reglas para el footer*/
+footer {
+  background-color: rgba(140, 146, 199, 0.901);
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+}
+footer a, footer p {
+  color: var(--second-color);  
+  margin-top: 0.25rem;
+}
+
+footer a:hover {
+  color: var(--accent-color);  
+}
+
+footer ul {
+  list-style-type: none; 
+}
+
+
+/*Reglas para el archivo index.html*/
+.portada {
+  background: unset;
+}
+body .portada h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+  
+}
+
+.portada p {
+  margin: 2rem 1rem;
+  font-size: 1.5rem;
+}
+
+/*Reglas para el archivo categoria.html*/
+
+.categoriaContent {
+  padding: 1rem;
+}
+
+.detalleTeaser {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 1rem 0;
+}
+
+.detalleTeaser article {
+ border: 2.5px solid var(--main-color);
+ border-radius: 5px;
+ 
+}
+
+.detalleTeaser article p{
+  padding: 0.5rem 1rem;
+  
+}
+
+
+.detalleTeaser article h3 a:hover {
+  color: var(--second-color);
+}
+
+
+.detalleTeaser article img {
+  width: 100%; 
+  height: 400px; 
+  object-fit: cover;
+  display: block; 
+}
+
+#map {
+  height: 450px; 
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
+/*Reglas para los archivos detalle_*.html*/
+.detalleIntro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.detalleIntro figcaption{
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.entrada {
+  width: 100%;    
+  margin-left: auto;
+  margin-right: auto; 
+  background-color: var(--third-color);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.entrada p, .entrada cite, .entrada ul, .entrada dl{
+  color: var(--second-color);
+  margin: 1.5rem 0;
+}
+
+.entrada blockquote {
+  border-left: solid 3px var(--accent-color);
+  padding: 0.25rem 1.3rem;
+}
+
+.entrada blockquote, .entrada cite {
+  font-size: 0.90rem;
+}
+
+.entrada ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem; 
+  margin: 0.5rem;
+}
+
+.entrada ul li::before {
+  content: "\2605"; 
+  position: absolute;
+  left: 0;
+  
+}
+
+.entrada dl dt {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 1rem;
+}
+
+.entrada dl dd {
+  font-weight: 400;
+    font-size: 0.95rem;
+    border-left: double 0.25rem var(--main-color);
+    padding: 0rem 0.5rem ;
+    margin-left: 1.15rem;
+}
+.otrasCategorias ul{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.otrasCategorias ul li {
+  list-style-type: none;   
+  margin: 0.5rem 0;
+}
+
+.otrasCategorias a {
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: var(--second-color);
+  padding: 0.5rem;
+  background-color: var(--main-color);
+  border: 1px solid var(--second-color);
+  border-radius: 10px;;
+  margin: 1rem;
+  
+}
+.otrasCategorias a:hover {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  border: 1px solid var(--contrast-color);
+}
+
+
+/*Reglas para el archivo presentación.html*/
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem; 
+}
+.videos article {
+  border: 2.5px solid var(--main-color); 
+  border-radius: 5px;
+  max-width: 560px;
+  margin: 1rem 0;
+} 
+.videos article p {
+  color: var(--main-color);
+  font-size: 1rem;
+  padding: 1.5rem 1rem;
+} 
+
+
+h3 {
+  font-size: 1.25rem;
+}
+/*Reglas para el archivo enlaces.html*/
+
+
+/******Reglas para dispositivos pequeños******/
+@media (max-width: 767px) {
+
+/*Reglas para la tabla de enlaces*/
+  .tabla-enlaces {
+  width: 100%;
+}
+
+thead {
+  display: none;
+}
+
+caption {
+  text-align:start;
+  margin: 1rem 0;
+}
+tbody tr {
+  display: block;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: var(--second-color);
+}
+
+
+tbody td {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.625rem;
+  margin: 0.2rem;
+}
+
+tbody td a {
+  color: var(--main-color);
+}
+
+tbody td a:hover {
+  color: var(--accent-color);
+}
+
+tbody td:last-child {
+  word-break:normal; 
+}
+
+tbody td:nth-of-type(1):before { content: "Tipo de recurso: "; font-weight: bold; color: var(--main-color); }
+tbody td:nth-of-type(2):before { content: "Descripción: "; font-weight: bold; color: var(--main-color); }
+tbody td:nth-of-type(3):before { content: "Utilizada en: "; font-weight: bold; color: var(--main-color); }
+tbody td:nth-of-type(4):before { content: "Autor: "; font-weight: bold; color: var(--main-color); }
+tbody td:nth-of-type(5):before { content: "Atribución*: "; font-weight: bold; color: var(--main-color); }
+tbody td:nth-of-type(6):before { content: "Enlace: "; font-weight: bold; color: var(--main-color); }
+
+}
+
+/*Reglas para el archivo categoria.html*/
+
+.categoriaContent {
+  padding: 1rem 0.2rem;
+}
+
+
+
+
+/*Reglas para el archivo presentación.html*/
+.presentacion h1 {
+  font-size: 2.1rem;
+}
+
+
+/******Reglas para dispositivos medianos******/
+@media (min-width: 768px) {
+  .container {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  header {
+    background: url("./img/fondo_header_bogota.png") no-repeat center;
+    background-size: contain;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .nav-menu {
+    position: unset;
+    display: flex;
+    text-align: center;
+    color: var(--main-color);
+    background-color: rgba(140, 146, 199, 0.901);
+    text-transform: uppercase;
+  }
+  
+  .nav-menu ul {
+    flex-direction: unset;
+}
+  
+  .nav-menu ul li {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-right: 3.5rem;
+    padding: 1.5rem 0;
+  }
+  
+  .nav-menu ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-menu ul li a {
+    color: inherit;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .nav-menu ul li a:hover {
+    border: none;
+    color: var(--accent-color);
+    transform: scale(2.05);
+  }
+
+
+  .entrada dl dd {
+      margin-left: 2rem;
+  }
+
+/*Reglas para la tabla de enlaces*/
+  .tabla-enlaces {
+    width: 90%;
+    max-width: 1000px;
+    overflow-x: auto;
+    
+    margin: 1.5rem auto;
+    padding: 1rem;
+    font-size: 0.2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  
+  caption {
+    font-size: 1.5rem;
+    border-top: 1px solid var(--accent-color);
+    font-weight: 700;
+    padding: 15px;
+  }
+  
+  td,
+  th {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+  }
+  
+  td,
+  th {
+      vertical-align: bottom;
+      text-align: left;
+  }
+  
+  th[scope="col"]:first-of-type {
+      text-align: left;
+  }
+  
+  th[scope="col"] {
+      font-weight: normal;
+      font-size: 1rem;
+  }
+  
+  th[scope="row"] {
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-align: left;
+  }
+  
+  thead tr {
+      border-top: 1px solid var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+  }
+  
+  tbody tr:nth-child(odd) {
+      background-color: var(--main-color);
+      color: var(--second-color);
+
+  }
+  tbody tr:nth-child(odd) a {
+    color: var(--second-color);
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  
+  tbody tr:nth-child(odd) a:hover {
+    color: var(--accent-color);
+  }
+  tbody tr:nth-child(even) a {
+    color: var(--main-color);
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  
+  tbody tr:nth-child(even) a:hover {
+    color: var(--accent-color);
+  }
+
+  tfoot {
+      border-bottom: 1px solid var(--accent-color);
+  }
+  
+  tfoot td {
+      text-align: left;
+      font-size: 0.8rem;
+  }
+
+  /*Reglas para el archivo index.html*/
+  .portada h1 {
+    font-size: 2.75rem;
+    
+  }
+  .portada p {
+    font-size: 2.25rem;
+    
+  }
+  
+  /*Reglas para el archivo categoria.html*/
+  .detalleTeaser {
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+
+  /*Reglas para el archivo presentación.html*/
+  .videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .presentacion h1 {
+    font-size: 3rem;
+  }
+
+
+}
+
+/******Reglas para dispositivos grandes******/
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .videos article h2 {
+      font-size: 1.25rem;
+  }
+  .videos article p {
+      font-size: 0.85rem;
+  }
+
+
+  .nav-menu ul li {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+    padding: 2rem 0;
+  }
+
+  /*Reglas para el archivo categoria.html*/
+  .detalleTeaser {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+/******Reglas para dispositivos más grandes******/
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+
+}
