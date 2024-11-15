@@ -52,7 +52,7 @@ if (typeof particlesJS !== 'function') {
           distance: 150,
           color: "#ffffff",
           opacity: 0.4,
-          width: 1.5
+          width: 0.2
         }
       },
       interactivity: {
@@ -76,12 +76,15 @@ if (typeof particlesJS !== 'function') {
 /*AOS - Animaciones al hacer scroll*/
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 AOS.init();
 
-
 /*Leaflet - Ubicaciones en un mapa*/
+
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+
+/*Configuración del mapa con sus respectivas coordenadas*/
 
 const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 13); 
 
@@ -89,6 +92,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+/*Adición del marker personalizada*/
 
 const locationIcon = L.icon({
   iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Marker_location.png?20190508151833',
@@ -97,7 +101,7 @@ const locationIcon = L.icon({
   popupAnchor: [0, -32]
 });
 
-
+/*Adición de los marcadores de todos los lugares listados en categoria.html*/
 const marker1 = L.marker([4.602148068807307, -74.07199819059095], { icon: locationIcon }).addTo(map); 
 marker1.bindPopup('Museo del Oro de Bogotá').openPopup();
 
