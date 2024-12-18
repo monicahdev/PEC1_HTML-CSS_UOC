@@ -1,7 +1,15 @@
 /*Desplegar el menú hamburguesa*/
 document.getElementById("burgerMenu").addEventListener("click", function () {
-    var navMenu = document.getElementById("navMenu");
+    let navMenu = document.getElementById("navMenu");
     navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+});
+
+/*Desplegar el menú del footer*/
+document.getElementById("footerMenu").addEventListener("click", function () {
+  let navFooter = document.getElementById("navFooter");
+  let footerMenu = document.getElementById("footerMenu");
+  navFooter.style.display = navFooter.style.display === "flex" ? "none" : "flex";
+  footerMenu.textContent = navFooter.style.display === "flex" ? "Menos de la miniguía" : "Más de la miniguía";
 });
 
 /*Fondo estrellado*/

@@ -69,7 +69,8 @@ h1, h2, h3, h4 {
   margin: 1.5rem 0;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.9rem;
+  
 }
 
 a {
@@ -88,24 +89,34 @@ a:hover {
 /*Reglas para el header*/
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position:relative;
-  background: url("./img/fondo_header_bogota.png") no-repeat right;
-  background-size: contain;
   padding: 2.5rem 1rem;
-  font-size: 1rem;
   margin: 0.5rem 0.75rem;
+}
 
+header h1 {
+  text-align: center;
 }
 
 .burger-menu {
-  font-size: 2.5rem;
+  font-size: 3rem;
   background: none;
   border: none;
   color: var(--main-color);
   font-weight: 600;
   cursor: pointer;
   margin: unset;
-  
+}
+
+.button-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 95%;
+  order: 2;
 }
 
 /*Reglas del menú de navegación*/
@@ -194,6 +205,102 @@ footer ul li{
   margin-bottom: 0.5rem;
 }
 
+.footer-menu {
+  display: none;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(140, 146, 199, 0.9);
+  padding: 1rem;
+}
+.nav-footer {
+  display: none; 
+  justify-content: center;  
+  background-color: var(--second-color);
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.nav-footer ul {
+  list-style-type: none;
+}
+
+.nav-footer ul li {
+  padding: 0.5rem 0;
+}
+
+.nav-footer ul li a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.nav-footer ul li a:hover {
+  color: var(--accent-color);
+}
+
+#footerMenu {
+  display: block;
+  font-size: 1.25rem;
+  background-color: unset;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Estilo de los enlaces dentro del menú de navegación */
+.footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  padding: 1rem 0;
+}
+
+.footer-menu ul li a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.footer-menu ul li a:hover {
+  color: var(--accent-color);
+}
+
+/*Animación logo footer*/
+.footerLogo img {
+  animation: turnLeftRight 2s infinite ease-in-out;
+}
+
+@keyframes turnLeftRight {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+
+
+h4 {
+  transition: transform 1.5s cubic-bezier(.5,.54,.77,.02);
+}
+
+h4:hover {
+  transform: scale(1.2);
+}
+
+h4:active {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
 /*Reglas para el archivo index.html*/
 
 .portada {
@@ -210,6 +317,11 @@ body .portada h1 {
 .portada p {
   margin: 2rem 1rem;
   font-size: 1.5rem;
+}
+
+#plaza {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
 }
 
 /*Reglas para el archivo categoria.html*/
@@ -235,7 +347,6 @@ body .portada h1 {
   padding: 0.5rem 1rem;
   
 }
-
 
 .detalleTeaser article h3 a:hover {
   color: var(--second-color);
@@ -375,7 +486,65 @@ h3 {
   padding: 0.5rem
 }
 
+/*Animaciones CSS*/
+.animated-h2 {
+  animation: fadeScale 3s;
+}
 
+@keyframes fadeScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+}
+
+
+#introImg {
+  margin-left: auto;
+  margin-right: auto;
+  animation: bounceIn 5s ease-in-out infinite;
+}
+
+@keyframes bounceIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.3);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  70% {
+      transform: scale(0.9);
+  }
+  90% {
+      transform: scale(1.03);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/******Reglas para dispositivos muy pequeños******/
+@media (max-width: 520px) {
+
+  header h1 {
+    font-size: 1.95rem;
+  }
+
+  .burger-menu {
+    font-size: 2rem;
+  }
+
+}
 
 /******Reglas para dispositivos pequeños******/
 @media (max-width: 767px) {
@@ -465,10 +634,20 @@ h3 {
   }
 
   /*Reglas para el header*/
-
+  
   header {
-    background: url("./img/fondo_header_bogota.png") no-repeat center;
-    background-size: contain;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1rem;
+  }
+
+  header h1 {
+    margin-bottom: 1rem;
+  }
+  .headerLogo img{
+    margin-bottom: 1rem; 
+    margin-left: auto;
   }
 
   .burger-menu {
@@ -482,8 +661,9 @@ h3 {
     display: flex;
     text-align: center;
     color: var(--main-color);
-    background-color: rgba(140, 146, 199, 0.901);
+    background-color: rgba(138, 145, 245, 0.13);
     text-transform: uppercase;
+    width: 100%;
   }
   
   .nav-menu ul {
@@ -671,3 +851,6 @@ h3 {
   }
 
 }
+
+
+
