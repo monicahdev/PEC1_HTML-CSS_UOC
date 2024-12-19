@@ -29,12 +29,26 @@
             
             <div class="detalleTeaser" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
               <article>
+                <!--
                 <picture>
                   <source media="(max-width: 767px)" srcset="./img/museo_del_oro_500.webp">
                   <source media="(min-width: 768px) and (max-width: 991px)" srcset="./img/museo_del_oro_768.webp">
                   <source media="(min-width: 992px)" srcset="./img/museo_del_oro_992.webp">
                   <img src="./img/museo_del_oro.jpg" alt="Caracola grande recubierta de oro." loading="lazy">
                 </picture>
+                -->
+
+                <img 
+  srcset="
+    ./img/museo_del_oro_250.webp 250w,
+    ./img/museo_del_oro_500.webp 500w,
+    ./img/museo_del_oro_768.webp 768w,
+    ./img/museo_del_oro_992.webp 992w" 
+  sizes="(max-width: 600px) 250px,
+         (min-width: 601px) and (max-width: 799px) 500px, 
+         (min-width: 800px) and (max-width: 1199px) 768px, 
+         (min-width: 1200px) 992px"
+  src="./img/museo_del_oro.jpg" alt="Caracola grande recubierta de oro." loading="lazy">
                 <h4><a href="detalle_cultura.html">Museo del oro</a></h4>
                 <p>Orfebería, cerámica y una mirada al patrimonio y la identidad cultural de Colombia.</p>
               </article>
@@ -47,8 +61,8 @@
     ./img/cafe_500.webp 500w,
     ./img/cafe_768.webp 768w,
     ./img/cafe_992.webp 992w" 
-  sizes="(max-width: 780px) 250px,
-         (min-width: 781px) and (max-width: 799px) 500px, 
+  sizes="(max-width: 600px) 250px,
+         (min-width: 601px) and (max-width: 799px) 500px, 
          (min-width: 800px) and (max-width: 1199px) 768px, 
          (min-width: 1200px) 992px"
   src="./img/cafe.jpg" loading="lazy"   
