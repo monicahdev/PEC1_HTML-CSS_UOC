@@ -29,7 +29,16 @@
         <h2>Cultura</h2>
         <div class="detalleIntro">
           <figure>
-              <img src="./img/poporo_512x512.png" alt="Ícono del Poporo quimbaya, recipiente en forma de botella con un fondo en forma de globo, cuello curvado hacia adentro y con cuatro esferas en su parte superior" width="128" height="128">
+            <img 
+            srcset="
+              ./img/poporo_128.png 128w,
+              ./img/poporo_256.png 256w" 
+            sizes="(min-width: 200px) and (max-width: 767px)128px,
+                   (min-width: 768px) 256px"
+                  src="./img/poporo_512x512.png" alt="Ícono del Poporo quimbaya, recipiente en forma de botella con un fondo en forma de globo, cuello curvado hacia adentro y con cuatro esferas en su parte superior">  
+            
+            
+          
               <figcaption>Poporo quimbaya</figcaption>
           </figure>
          

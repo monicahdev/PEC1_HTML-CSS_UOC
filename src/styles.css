@@ -387,7 +387,7 @@ body .portada h1 {
 
 /*Reglas para los archivos detalle_*.html*/
 
-.detalleIntro {
+.detalleIntro, .detalleIntro img {
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -538,31 +538,31 @@ h3 {
 /* Animación de rebote parabólico */
 @keyframes parabolico {
   0% {
-    transform: translate(-200px, 200px); /* Inicio abajo a la izquierda */
+    transform: translate(-200px, 200px);
   }
   13% {
-    transform: translate(-100px, -100px); /* Primer salto, punto más alto */
+    transform: translate(-100px, -100px);
   }
   25% {
-    transform: translate(0, 0); /* Primer aterrizaje */
+    transform: translate(0, 0);
   }
   37% {
-    transform: translate(100px, -120px); /* Segundo salto, punto más alto */
+    transform: translate(100px, -120px);
   }
   50% {
-    transform: translate(200px, 0); /* Segundo aterrizaje */
+    transform: translate(200px, 0);
   }
   63% {
-    transform: translate(300px, -80px); /* Tercer salto, punto más alto */
+    transform: translate(300px, -80px);
   }
   75% {
-    transform: translate(400px, 0); /* Tercer aterrizaje */
+    transform: translate(400px, 0);
   }
   87% {
-    transform: translate(200px, -100px); /* Regreso al centro, punto más alto */
+    transform: translate(200px, -100px);
   }
   100% {
-    transform: translate(200px, 0); /* Regreso final a la mitad */
+    transform: translate(200px, 0);
   }
 }
 
