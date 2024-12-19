@@ -145,7 +145,3 @@ marker11.bindPopup('Restaurante Mini Mal').openPopup();
 
 const marker12 = L.marker([4.653588138269378, -74.05521426088558], { icon: locationIcon }).addTo(map); 
 marker12.bindPopup('Libertario Café').openPopup();
-
-
-
-

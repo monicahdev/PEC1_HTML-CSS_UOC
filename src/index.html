@@ -20,20 +20,17 @@
       <include src="src/header.html"></include>
       <main class="portada">
         <h2 class="animated-h2">CONOCE BOGOTÁ</h2>
-        <!--<picture>
-          <source srcset="./img/bogota_noche.jpg?as=avif" type="image/avif" />
-          <source srcset="./img/bogota_noche.jpg?as=webp" type="image/webp" />
-          <source srcset="./img/bogota_noche.jpg?as=webp&width=100" type="image/webp" />
-          <img src="./img/bogota_noche.jpg?width=100" alt="test image" />
-      </picture>  -->
-        
-        
-        <!--<img id="plaza" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">  -->
           <p>Bogotá es una ciudad que tiene más de 450 años de historia. Es la capital de Colombia y se alza a 2,600 metros de altura sobre el nivel del mar en plena cordillera de los Andes.</p>
+          <img id="plaza" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">
+          <picture>
+            <source media="(max-width: 620px)" srcset="./img/bogota_noche_350.webp">
+            <source media="(min-width: 621px) and (max-width: 768px)" srcset="./img/bogota_noche_600.webp">
+            <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./img/bogota_noche_800.webp">
+            <source media="(min-width: 1200px)" srcset="./img/bogota_noche_1200.webp">
+            <img id="plaza" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">
+          </picture>
           <p>Si visitas Colombia y quieres conocer un poco de su capital; en este sitio encontrarás la propuesta de una bogotana.</p>
           <p>Descubre algunos <a href="categoria.html">sitios de interés</a>.</p>
-          <!--<img id="plaza" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">  -->
-          
       </main>
       <include src="src/footer.html"></include>
     </div>
