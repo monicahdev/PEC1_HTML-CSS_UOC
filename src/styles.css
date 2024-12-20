@@ -511,6 +511,25 @@ h3 {
   padding: 0.5rem
 }
 
+/*Animaciones CSS*/
+.animated-h2 {
+  animation: fadeScale 3s infinite;
+}
+
+@keyframes fadeScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+}
 .star {
   margin-top: 10rem;
   
@@ -520,8 +539,6 @@ h3 {
   position: relative;
   overflow: visible;
 }
-
-/* Animación de rebote parabólico */
 @keyframes parabolico {
   0% {
     transform: translate(-200px, 200px);
@@ -555,53 +572,6 @@ h3 {
 .animated-star {
   animation: parabolico 4s ease-in-out forwards;
 }
-
-@keyframes moveDiagonally {
-  0% {
-    transform: translate(0, 0);
-    r: 60;
-
-  }
-  50% {
-    transform: translate(60px, 60px);
-    r: 30;
-
-  }
-  100% {
-    transform: translate(0, 0);
-    r: 60;
-  }
-}
-
-object {
-  width: 65vw;
-  animation: moveDiagonally ease-in-out 4s infinite;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0 5rem 0;
-}
-
-/*Animaciones CSS*/
-.animated-h2 {
-  animation: fadeScale 3s infinite;
-}
-
-@keyframes fadeScale {
-  0% {
-      opacity: 0;
-      transform: scale(0.8);
-  }
-  50% {
-      opacity: 1;
-      transform: scale(1.2);
-  }
-  100% {
-      opacity: 0;
-      transform: scale(0.8);
-  }
-}
-
 
 #introImg {
   margin-left: auto;
