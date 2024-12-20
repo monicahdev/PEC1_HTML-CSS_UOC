@@ -448,7 +448,7 @@ body .portada h1 {
   font-size: 0.95rem;
   border-left: double 0.25rem var(--main-color);
   padding: 0rem 0.5rem ;
-  margin-left: 1.15rem;
+  margin-left: 1rem;
 }
 
 .otrasCategorias ul{
@@ -680,6 +680,7 @@ object {
   }
 
   tbody tr {
+    max-width: 85vw;
     display: block;
     margin-bottom: 1rem;
     border: 1px solid var(--accent-color);
