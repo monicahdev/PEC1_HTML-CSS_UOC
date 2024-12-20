@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="module" src="app.js"></script>
   </head>
   <body>
@@ -21,15 +20,22 @@
       <main class="portada">
         <h2 class="animated-h2">CONOCE BOGOTÁ</h2>
           <p>Bogotá es una ciudad que tiene más de 450 años de historia. Es la capital de Colombia y se alza a 2,600 metros de altura sobre el nivel del mar en plena cordillera de los Andes.</p>
-          <img id="plaza0" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">
           <picture>
-            <source media="(max-width: 620px)" srcset="./img/bogota_noche_350.webp">
-            <source media="(min-width: 621px) and (max-width: 768px)" srcset="./img/bogota_noche_600.webp">
-            <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./img/bogota_noche_800.webp">
-            <source media="(min-width: 1200px)" srcset="./img/bogota_noche_1200.webp">
-            <img id="plaza" src="./img/bogota_noche.jpg" alt="Construcción religiosa hecha de piedra">
+            <source media="(max-width: 620px)" srcset="./img/plaza_bolivar_350.webp">
+            <source media="(min-width: 621px) and (max-width: 768px)" srcset="./img/plaza_bolivar_600.webp">
+            <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./img/plaza_bolivar_800.webp">
+            <source media="(min-width: 1200px)" srcset="./img/plaza_bolivar_900.webp">
+            <!-- Fallback en jpg -->
+            <source media="(max-width: 620px)" srcset="./img/plaza_bolivar_350.jpg">
+            <source media="(min-width: 621px) and (max-width: 768px)" srcset="./img/plaza_bolivar_600.jpg">
+            <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./img/plaza_bolivar_800.jpg">
+            <source media="(min-width: 1200px)" srcset="./img/plaza_bolivar_900.jpg">
+            <img class="plaza" src="./img/plaza_bolivar.jpg" alt="Construcción religiosa hecha de piedra">
           </picture>
           <p>Si visitas Colombia y quieres conocer un poco de su capital; en este sitio encontrarás la propuesta de una bogotana.</p>
+          <img id="noche"
+            srcset="./img/noche.webp 1x, ./img/noche-2x.webp 2x, ./img/noche-3x.jpg 3x"
+            src="./img/noche-3x.jpg" alt="Fotografía de vista aérea nocturna de la ciudad de Bogotá. Millones de luces iluminan la ciudad.">
           <p>Descubre algunos <a href="categoria.html">sitios de interés</a>.</p>
       </main>
       <include src="src/footer.html"></include>
