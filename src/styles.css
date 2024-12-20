@@ -321,12 +321,16 @@ body .portada h1 {
   justify-content: center;
 
 }
-#plaza {
+.plaza {
   text-align: center;
 
   clip-path: polygon(10% 5%, 30% 15%, 50% 5%, 70% 20%, 90% 10%, 95% 30%, 85% 50%, 90% 70%, 75% 85%, 60% 75%, 50% 90%, 40% 75%, 15% 80%, 5% 60%);
   clip-path: polygon(0% 10%, 30% 0%, 70% 5%, 100% 20%, 90% 70%, 70% 90%, 50% 100%, 30% 70%, 10% 60%);
   clip-path: polygon(50% 0%, 70% 15%, 90% 30%, 100% 60%, 70% 90%, 50% 80%, 30% 90%, 10% 60%, 0% 30%, 30% 15%);
+}
+
+#noche {
+  max-width: 95%;
 }
 
 /*Reglas para el archivo categoria.html*/
@@ -507,24 +511,6 @@ h3 {
   padding: 0.5rem
 }
 
-@keyframes moveAndGrow {
-  0% {
-    transform: translate(0, 0);
-    r: 60;
-    fill: orange;
-  }
-  50% {
-    transform: translate(60px, 60px);
-    r: 30;
-    fill: red;
-  }
-  100% {
-    transform: translate(0, 0);
-    r: 60;
-    fill: orange;
-  }
-}
-
 .star {
   margin-top: 10rem;
   
@@ -570,31 +556,30 @@ h3 {
   animation: parabolico 4s ease-in-out forwards;
 }
 
+@keyframes moveDiagonally {
+  0% {
+    transform: translate(0, 0);
+    r: 60;
 
+  }
+  50% {
+    transform: translate(60px, 60px);
+    r: 30;
 
-.animated-circle {
-  animation: moveAndGrow 4s ease-in-out infinite;
+  }
+  100% {
+    transform: translate(0, 0);
+    r: 60;
+  }
 }
 
 object {
-  max-width: 70vw;
-  animation: moveAndGrow cubic-bezier(.5,.54,.77,.02) 4s infinite;
-}
-
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animatedSquare {
-  animation: slideRight 5s ease-in-out infinite;
-  width: 200px;
-  height: 200px;
+  width: 65vw;
+  animation: moveDiagonally ease-in-out 4s infinite;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 5rem 0;
 }
 
 /*Animaciones CSS*/
@@ -654,7 +639,6 @@ object {
   .burger-menu {
     font-size: 2rem;
   }
-
 }
 
 /******Reglas para dispositivos pequeños******/
