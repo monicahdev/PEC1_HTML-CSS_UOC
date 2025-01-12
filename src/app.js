@@ -16,7 +16,7 @@ document.getElementById("footerMenu").addEventListener("click", function () {
 import particlesJS from 'particles.js';
 
 if (typeof particlesJS !== 'function') {
-  console.log('Error');
+  console.log('Error al cargar particles.js');
 } else {
   
   document.addEventListener("DOMContentLoaded", function () {
