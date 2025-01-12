@@ -13,6 +13,8 @@ document.getElementById("footerMenu").addEventListener("click", function () {
 });
 
 /*Fondo estrellado*/
+import particlesJS from 'particles.js';
+
 if (typeof particlesJS !== 'function') {
   console.log('Error');
 } else {
