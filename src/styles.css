@@ -334,6 +334,7 @@ h4:active {
 
 .portada {
   background: unset;
+  max-width: 99%;
 }
 
 body .portada h1 {
@@ -365,7 +366,7 @@ body .portada h1 {
 }
 
 #noche {
-  max-width: 95%;
+  max-width: 99%;
 }
 
 /*Reglas para el archivo categoria.html*/
