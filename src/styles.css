@@ -375,7 +375,7 @@ body .portada h1 {
   padding: 1rem;
 }
 
-.categoriaContent p {
+.categoriaContent intro p, .categoriaContent p {
   width: 97%;
   padding: 1rem;
 }
