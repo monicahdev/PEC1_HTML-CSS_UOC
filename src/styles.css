@@ -376,8 +376,9 @@ body .portada h1 {
 }
 
 .intro p, .categoriaContent p, .detalleIntro p {
-  max-width: 90%;
+  max-width: 97%;
   padding: 1rem;
+  background-color: var(--second-color);
 }
 
 .detalleTeaser {
