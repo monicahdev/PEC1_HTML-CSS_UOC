@@ -344,6 +344,7 @@ body .portada h1 {
 }
 
 .portada p {
+  width: 100%;
   margin: 2rem 1rem;
   font-size: 1.5rem;
 }
