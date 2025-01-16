@@ -202,7 +202,7 @@ footer a:hover {
 
 footer ul li{
   list-style-type: none; 
-  margin-bottom: 0.5rem;
+  margin: 1.25rem 0;
 }
 
 .footer-menu {
@@ -216,7 +216,7 @@ footer ul li{
   display: none; 
   justify-content: center;  
   background-color: var(--second-color);
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   border-radius: 5px;
 }
 
@@ -242,8 +242,9 @@ footer ul li{
   font-size: 1.25rem;
   background-color: unset;
   border: none;
-  color: var(--accent-color);
+  color: white;
   cursor: pointer;
+
 }
 
 /* Estilo de los enlaces dentro del menú de navegación */
@@ -254,11 +255,14 @@ footer ul li{
 
 .footer-menu ul li {
   padding: 1rem 0;
+  
+
 }
 
 .footer-menu ul li a {
   text-decoration: none;
   color: var(--main-color);
+  margin: 2rem 0;
 }
 
 .footer-menu ul li a:hover {
