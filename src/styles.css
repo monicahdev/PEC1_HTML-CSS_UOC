@@ -375,6 +375,11 @@ body .portada h1 {
   padding: 1rem;
 }
 
+.categoriaContent p {
+  width: 97%;
+  padding: 1rem;
+}
+
 .detalleTeaser {
   display: grid;
   gap: 1rem;
