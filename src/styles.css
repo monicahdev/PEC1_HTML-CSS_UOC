@@ -2,9 +2,9 @@
 :root {
   --main-color: rgb(225, 215, 252);
   --second-color: rgb(28, 28, 57);
-  --third-color: rgba(226, 217, 252, 0.68);  
+  --third-color: rgba(226, 217, 252, 0.84);  
   --accent-color: rgb(255, 163, 226);
-  --accent-color-entrada: rgb(190, 0, 130);
+  --accent-color-entrada: rgb(180, 55, 2);
   --sans-serif-headings: "Aboreto", system-ui;
   --sans-serif: "Poppins", sans-serif;    
 }
