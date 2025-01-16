@@ -12,8 +12,8 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,600&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/logico/lazy-youtube-embed/dist/lazy-youtube-embed.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazy-youtube-embed@1.0.0/dist/lazy-youtube-embed.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
+  
     <script defer type="module" src="app.js"></script>
     <script src="particles.js"></script>
   </head>
@@ -37,7 +37,11 @@
         <p>Esta página la denominé Sitios de interés en los que muestro cuatro categorías diferentes: <span class="italics">Cultura</span>, <span class="italics">Naturaleza</span>, <span class="italics">Compras</span>, y <span class="italics">Experiencias Gastronómicas</span>. En esta página muestro un pequeño <span class="italics">teaser</span> de tres opciones de sitios de interés en Bogotá, Colombia para cada categoría. Puedes conocer un poco más de estas categorías en los siguientes vídeos.</p>
         <div class="videos">
           <article>
-            <a src="https://youtu.be/8IVUo0agGo8" class="lazy-youtube-embed">Museo del Oro</a>
+            
+            <lite-youtube videoid="8IVUo0agGo8">
+              <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=guJLfqTFfIw">Watch on YouTube: "Sample output of devtools-to-video cli tool"</a>
+            </lite-youtube>
+  
             
             
               <h4>Cultura</h4>
