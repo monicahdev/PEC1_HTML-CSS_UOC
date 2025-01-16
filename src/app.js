@@ -82,8 +82,9 @@ if (typeof particlesJS !== 'function') {
 /*AOS - Animaciones al hacer scroll*/
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+document.addEventListener('DOMContentLoaded', () => {
 AOS.init();
+});
 
 /*Leaflet - Ubicaciones en un mapa*/
 
