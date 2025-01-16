@@ -2,9 +2,9 @@
 :root {
   --main-color: rgb(225, 215, 252);
   --second-color: rgb(28, 28, 57);
-  --third-color: rgba(226, 217, 252, 0.84);  
+  --third-color: rgba(226, 217, 252, 0.466);  
   --accent-color: rgb(255, 163, 226);
-  --accent-color-entrada: rgb(180, 55, 2);
+  --accent-color-entrada: rgb(252, 245, 243);
   --sans-serif-headings: "Aboreto", system-ui;
   --sans-serif: "Poppins", sans-serif;    
 }
@@ -448,7 +448,7 @@ body .portada h1 {
 }
 
 .entrada cite a:hover, .entrada dl dd a:hover {
-  color: var(--main-color);
+  color: var(--accent-color);
 }
 
 .entrada p, .entrada cite, .entrada ul, .entrada dl{
