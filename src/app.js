@@ -83,7 +83,9 @@ if (typeof particlesJS !== 'function') {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 document.addEventListener('DOMContentLoaded', () => {
-AOS.init();
+  if (document.body.id === 'categoria') {
+      AOS.init();
+  }
 });
 
 /*Leaflet - Ubicaciones en un mapa*/
