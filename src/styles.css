@@ -357,8 +357,8 @@ body .portada h1 {
 
 }
 .plaza {
+  max-width: 95%;
   text-align: center;
-
   clip-path: polygon(10% 5%, 30% 15%, 50% 5%, 70% 20%, 90% 10%, 95% 30%, 85% 50%, 90% 70%, 75% 85%, 60% 75%, 50% 90%, 40% 75%, 15% 80%, 5% 60%);
   clip-path: polygon(0% 10%, 30% 0%, 70% 5%, 100% 20%, 90% 70%, 70% 90%, 50% 100%, 30% 70%, 10% 60%);
   clip-path: polygon(50% 0%, 70% 15%, 90% 30%, 100% 60%, 70% 90%, 50% 80%, 30% 90%, 10% 60%, 0% 30%, 30% 15%);
@@ -812,6 +812,10 @@ h3 {
   .portada p {
     font-size: 2.25rem;
     
+  }
+
+  .portada picture {
+    max-width: 90%;
   }
   
   /*Reglas para el archivo categoria.html*/
