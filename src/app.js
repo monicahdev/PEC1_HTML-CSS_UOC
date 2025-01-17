@@ -95,9 +95,6 @@ import L from 'leaflet';
 
 /*Configuración del mapa con sus respectivas coordenadas*/
 
-if (document.getElementById("map")) {
-
-
 const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 50); 
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -149,4 +146,3 @@ marker11.bindPopup('Restaurante Mini Mal').openPopup();
 
 const marker12 = L.marker([4.653588138269378, -74.05521426088558], { icon: locationIcon }).addTo(map); 
 marker12.bindPopup('Libertario Café').openPopup();
-}
