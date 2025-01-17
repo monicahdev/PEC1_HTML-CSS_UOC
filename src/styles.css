@@ -367,6 +367,7 @@ body .portada h1 {
 
 #noche {
   max-width: 99%;
+  height: auto;
 }
 
 /*Reglas para el archivo categoria.html*/
