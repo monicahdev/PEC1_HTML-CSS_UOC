@@ -91,16 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
 /*Leaflet - Ubicaciones en un mapa*/
 
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+/*import L from 'leaflet';*/
 
 /*Configuración del mapa con sus respectivas coordenadas*/
 
 if (document.getElementById("map")) {
-  const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 50); 
-  
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  import('leaflet').then(L => {
+
+    const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 50); 
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
   
   /*Adición del marker personalizada*/
   
@@ -147,4 +149,6 @@ if (document.getElementById("map")) {
   
   const marker12 = L.marker([4.653588138269378, -74.05521426088558], { icon: locationIcon }).addTo(map); 
   marker12.bindPopup('Libertario Café').openPopup();
+  
+});
 }
