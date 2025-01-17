@@ -436,7 +436,11 @@ body .portada h1 {
 
 .detalleIntro figure {
   max-width: fit-content;
-  margin: auto
+  margin: auto;
+}
+
+.detalleIntro figure img{
+  max-width: 100%;
 }
 
 .detalleIntro, .detalleIntro img {
@@ -722,7 +726,7 @@ h3 {
     text-align: left;
     justify-content: space-between;
     padding: 0.5rem 0;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 0.2rem;
 
   }
