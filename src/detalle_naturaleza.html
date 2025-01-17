@@ -22,6 +22,11 @@
       <include src="src/header.html"></include>
       <main class="detalle">
         <picture class="art-dir">
+          <source media="(max-width: 500px)" srcset="./img/art-detalle_300.webp" width="300" height="80">
+          <source media="(max-width: 900px)" srcset="./img/art-detalle_450.webp" width="450" height="80">
+          <source media="(min-width: 901px) and (max-width: 1199px)" srcset="./img/art-detalle_680.webp" width="680" height="200">
+          <source media="(min-width: 1200px)" srcset="./img/art-detalle_992.webp" width="992" height="300">
+          <!-- Fallback en jpg -->
           <source media="(max-width: 500px)" srcset="./img/art-detalle_300.jpg" width="300" height="80">
           <source media="(max-width: 900px)" srcset="./img/art-detalle_450.jpg" width="450" height="80">
           <source media="(min-width: 901px) and (max-width: 1199px)" srcset="./img/art-detalle_680.jpg" width="680" height="200">
