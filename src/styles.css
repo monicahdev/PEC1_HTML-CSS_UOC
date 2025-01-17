@@ -545,6 +545,9 @@ body .portada h1 {
   align-items: center;
   border-radius: 15px;
   margin-left: 1rem;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
 }
 /*Reglas para el archivo presentación.html*/
 
