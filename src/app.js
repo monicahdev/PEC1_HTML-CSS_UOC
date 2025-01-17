@@ -95,14 +95,6 @@ import L from 'leaflet';
 
 /*Configuración del mapa con sus respectivas coordenadas*/
 
-const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 50); 
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-/*Adición del marker personalizada*/
-
 if (document.getElementById("map")) {
   const map = L.map('map').setView([4.698565495824532, -74.02305236050358], 50); 
   
